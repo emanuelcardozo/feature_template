@@ -1,0 +1,57 @@
+{
+  "singular": "{{cookiecutter.resource_name_singular|capitalize}}",
+  "listing": {
+    "title": "{{cookiecutter.resource_name_plural|capitalize}}"
+  },
+  "details": {
+    "details": "Details"
+  },
+  "fields": {
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "actions": "Actions"
+  },
+  "create": {
+    "title": "New {{cookiecutter.resource_name_singular|capitalize}}",
+    "cancelDialog": {
+      "title": "Cancel {{cookiecutter.resource_name_singular|lower}} creation",
+      "content": "Are you sure to cancel this {{cookiecutter.resource_name_singular|lower}}? All the progress will be lost",
+      "confirm": "Continue editing",
+      "cancel": "Exit"
+    }
+  },
+  "edit": {
+    "title": "Edit {{cookiecutter.resource_name_singular|capitalize}}",
+    "cancelDialog": {
+      "title": "Cancel {{cookiecutter.resource_name_singular|lower}} edition",
+      "content": "Are you sure to cancel this {{cookiecutter.resource_name_singular|lower}}? All the progress will be lost",
+      "confirm": "Continue editing",
+      "cancel": "Exit"
+    }
+  },
+  "filters": {
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "all": "All"
+  },
+  "form": {
+    "details": "Basic details",
+    "name": "Name",
+    "cancel": "Cancel",
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "saveAndNoActivate": "Save without activation",
+    "saveAndActivate": "Save with activation"
+  },
+  "dialog": {
+    "title": "Action on Backoffice",
+    "content": "Are you sure to action this {{cookiecutter.resource_name_singular|lower}} on p¡p?",
+    "hide": "Deactivate",
+    "unhide": "Activate",
+    "confirm": "Activate",
+    "cancel": "Cancel"
+  }
+}

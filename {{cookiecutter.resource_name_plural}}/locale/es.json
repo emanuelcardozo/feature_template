@@ -1,0 +1,57 @@
+{
+  "singular": "{{cookiecutter.resource_name_singular|capitalize}}",
+  "listing": {
+    "title": "{{cookiecutter.resource_name_plural|capitalize}}"
+  },
+  "details": {
+    "details": "Detalles"
+  },
+  "fields": {
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "actions": "Acciones"
+  },
+  "create": {
+    "title": "Nueva {{cookiecutter.resource_name_singular|capitalize}}",
+    "cancelDialog": {
+      "title": "Cancelar creación de {{cookiecutter.resource_name_singular|lower}}",
+      "content": "Estás seguro que deseas cancelar la creación? Todo el progreso se perderá",
+      "confirm": "Continuar editando",
+      "cancel": "Salir"
+    }
+  },
+  "edit": {
+    "title": "Editar Categoría",
+    "cancelDialog": {
+      "title": "Cancelar edición de {{cookiecutter.resource_name_singular|lower}}",
+      "content": "Estás seguro que deseas cancelar la edición? Todo el progreso se perderá",
+      "confirm": "Continuar editando",
+      "cancel": "Salir"
+    }
+  },
+  "filters": {
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "all": "Todos"
+  },
+  "form": {
+    "details": "Detalles básicos",
+    "name": "Nombre",
+    "cancel": "Cancelar",
+    {% for field in cookiecutter.__fields %}
+    "{{field.name}}": "{{field.name}}",
+    {% endfor %}
+    "saveAndNoActivate": "Guardar sin activar",
+    "saveAndActivate": "Guardar y activar"
+  },
+  "dialog": {
+    "title": "Acción en Backoffice",
+    "content": "¿Confirma que desea Acción la {{cookiecutter.resource_name_singular|lower}} en p¡p?",
+    "hide": "Desactivar",
+    "unhide": "Activar",
+    "confirm": "Desactivar",
+    "cancel": "Cancelar"
+  }
+}
